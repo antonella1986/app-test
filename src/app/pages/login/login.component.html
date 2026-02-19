@@ -1,0 +1,34 @@
+<div class="login-wrapper">
+  <p-card header="Login">
+
+    <div class="field">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        pInputText
+        [(ngModel)]="username"
+        placeholder="Inserisci username"
+        class="w-full"
+      />
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <p-password
+        [(ngModel)]="password"
+        [toggleMask]="true"
+        placeholder="Inserisci password"
+        class="w-full"
+      ></p-password>
+    </div>
+
+    <p-button
+      label="Accedi"
+      icon="pi pi-sign-in"
+      (onClick)="doLogin()"
+      styleClass="w-full mt-3"
+    ></p-button>
+
+  </p-card>
+</div>
