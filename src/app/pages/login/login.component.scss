@@ -1,9 +1,92 @@
-.login-wrapper {
-  height: 100vh;
+.login-container {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('/assets/img/tyrande.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #4f46e5, #9333ea);
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(10, 15, 30, 0.85)
+  );
+  z-index: 1;
+}
+
+.login-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+::ng-deep .p-card {
+  width: 420px;
+  border-radius: 20px;
+  padding: 2rem;
+  background: rgba(10, 15, 30, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(46, 90, 232, 0.4);
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(46, 90, 232, 0.3);
+}
+
+/* CARD */
+.login-wrapper .card {
+  width: 420px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow:
+  0 0 30px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(46, 90, 232, 0.3);
+  border: 1px solid rgba(46, 90, 232, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* forza il wrapper del p-password */
+::ng-deep .p-password {
+  width: 100%;
+}
+
+::ng-deep .p-password input {
+  width: 100%;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 120px;
+}
+
+.title {
+  color: white;
+  font-weight: 600;
+}
+
+.arena-text {
+  color: #2e5ae8;
+  text-shadow: 
+    0 0 5px #2e5ae8,
+    0 0 15px #446ae7,
+    0 0 25px #446ae7;
 }
 
 p-card {
@@ -14,4 +97,73 @@ p-card {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+::ng-deep .login-btn {
+  width: 100%;
+  background-color: #2e5ae8;
+  border-color: #2e5ae8;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(46, 90, 232, 0.5);
+}
+
+/* Glow animato continuo */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 8px rgba(46, 90, 232, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(46, 90, 232, 0.8); }
+  100% { box-shadow: 0 0 8px rgba(46, 90, 232, 0.4); }
+}
+
+::ng-deep .login-btn {
+  animation: pulseGlow 2s infinite ease-in-out;
+  margin-top: 2rem;
+}
+
+/* Hover */
+::ng-deep .login-btn:hover {
+  background-color: #2448c2;
+  border-color: #2448c2;
+  transform: translateY(-2px);
+}
+
+/* Click effect */
+::ng-deep .login-btn:active {
+  transform: scale(0.97);
+}
+
+/* Testo più deciso */
+::ng-deep .login-btn .p-button-label {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Shine effect che scorre */
+::ng-deep .login-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: all 0.75s ease;
+}
+
+::ng-deep .login-btn:hover::after {
+  left: 125%;
 }

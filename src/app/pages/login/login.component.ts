@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
+//componenti PrimeNG
 import { InputText } from 'primeng/inputtext';
 import { Password } from 'primeng/password';
 import { Button } from 'primeng/button';
@@ -28,7 +29,7 @@ export class LoginComponent {
   users = [
     { username: 'admin', password: '12345' }
   ];
-
+  //uso il costruttore per iniettare il Router, che mi permette di navigare tra le pagine
   constructor(private router: Router) {}
 
   doLogin() {
