@@ -1,0 +1,46 @@
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.titolo {
+    font-size: 40px;
+}
+
+.arena-text {
+  color: #2e5ae8;
+  text-shadow: 
+    0 0 5px #2e5ae8,
+    0 0 15px #446ae7,
+    0 0 25px #446ae7;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nuova-partita {
+    cursor: pointer;
+}
+.nuova-partita:hover {
+    color: #2e5ae8;
+    text-shadow: 
+      0 0 5px #2e5ae8,
+      0 0 15px #446ae7,
+      0 0 25px #446ae7;
+}

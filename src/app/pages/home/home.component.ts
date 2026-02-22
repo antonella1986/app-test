@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  template: `
-    <div class="flex justify-content-center align-items-center h-screen">
-      <h1>Benvenuto nella Home 🎉</h1>
-    </div>
-  `
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  imports: []
 })
-export class HomeComponent {}
+export class HomeComponent {
 
+  constructor(private router: Router) {}
+
+  goNuovaPartita() {
+    this.router.navigate(['/gestore-partita']);
+  }
+}
