@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GestorePaginaComponent } from './gestore-pagina.component';
+import { CreaPersonaggioComponent } from './crea-personaggio.component';
 
-describe('GestorePaginaComponent', () => {
-  let component: GestorePaginaComponent;
-  let fixture: ComponentFixture<GestorePaginaComponent>;
+describe('CreaPersonaggioComponent', () => {
+  let component: CreaPersonaggioComponent;
+  let fixture: ComponentFixture<CreaPersonaggioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GestorePaginaComponent]
+      imports: [CreaPersonaggioComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GestorePaginaComponent);
+    fixture = TestBed.createComponent(CreaPersonaggioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
