@@ -33,10 +33,10 @@
   padding: 2rem;
   background: rgba(10, 15, 30, 0.92);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(46, 90, 232, 0.4);
+  border: 1px solid #5AEFFD66;
   box-shadow:
     0 0 30px rgba(0, 0, 0, 0.6),
-    0 0 40px rgba(46, 90, 232, 0.3);
+    0 0 40px rgba(90, 239, 253, 0.3);
 }
 
 /* CARD */
@@ -81,14 +81,6 @@
   font-weight: 600;
 }
 
-.arena-text {
-  color: #2e5ae8;
-  text-shadow: 
-    0 0 5px #2e5ae8,
-    0 0 15px #446ae7,
-    0 0 25px #446ae7;
-}
-
 p-card {
   width: 350px;
 }
@@ -106,8 +98,8 @@ p-card {
 
 ::ng-deep .login-btn {
   width: 100%;
-  background-color: #2e5ae8;
-  border-color: #2e5ae8;
+  background-color: #5AEFFD;
+  border-color: #5AEFFD;
   color: white;
   font-weight: 500;
   position: relative;
@@ -130,8 +122,8 @@ p-card {
 
 /* Hover */
 ::ng-deep .login-btn:hover {
-  background-color: #2448c2;
-  border-color: #2448c2;
+  background-color: #5AEFFD;
+  border-color: #5AEFFD;
   transform: translateY(-2px);
 }
 
@@ -144,6 +136,7 @@ p-card {
 ::ng-deep .login-btn .p-button-label {
   font-weight: 700;
   letter-spacing: 1px;
+  color: darkblue;
 }
 
 /* Shine effect che scorre */
@@ -166,4 +159,15 @@ p-card {
 
 ::ng-deep .login-btn:hover::after {
   left: 125%;
+}
+
+::ng-deep .p-password-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+#username:focus {
+  border-color: #5AEFFD !important;
+  box-shadow: 0 0 0 2px rgba(90, 239, 253, 0.4) !important;
 }

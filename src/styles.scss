@@ -7,8 +7,21 @@
     font-family: Jura, sans-serif;
 }
 
+.p-inputtext:focus {
+  border-color: #5AEFFD !important;
+  box-shadow: 0 0 0 2px rgba(90, 239, 253, 0.4) !important;
+}
+
 #card-login {
-    border: 1px solid aqua;
+    border: 1px solid #5AEFFD;
+}
+
+.arena-text {
+  color: #5AEFFD;
+  text-shadow: 
+    0 0 5px #5AEFFD,
+    0 0 15px #5AEFFD,
+    0 0 25px #5AEFFD;
 }
 
 
