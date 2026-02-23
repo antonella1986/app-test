@@ -5,8 +5,9 @@ la funzione deve cambiare una variabile booleana che controlla la visibilità de
 DENTRO IL .TS VA SCRITTA LA LOGICA DELLA FUNZIONE CHE DEVE ESSERE CHIAMATA DAL CLIC. DENTRO QUESTA FUNZIONE VA IMPOSTATO IL VALORE DELLA VARIABILE, CHE A SUA VOLTA STA NELL'NGIF. QUEL VALORE DEVE ESSERE CONTRARIO AL VALORE IMPOSTATO NELLA FUNZIONE.-->
 
 <div class="personaggio-container">
-    <h2 (click)="creaPersonaggio()">Crea il tuo personaggio</h2>
-        <div class="sezione-personaggio" *ngIf="!mostraCreaPersonaggio">
+    <h2 (click)="creaPersonaggio()" class="voce-menu">Crea il tuo personaggio</h2>
+        <div class="sezione-personaggio animazione-form" *ngIf="mostraCreaPersonaggio"
+          >
             <div class="field">
               <label for="name">Nome</label>
               <input

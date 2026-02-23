@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InputText } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-gestore-partita',
-  imports: [CommonModule],
+  imports: [CommonModule, InputText],
   templateUrl: './gestore-partita.component.html',
   styleUrl: './gestore-partita.component.scss'
 })

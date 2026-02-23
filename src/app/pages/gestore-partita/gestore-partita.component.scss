@@ -1,6 +1,67 @@
+.personaggio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
 
+.sezione-personaggio {
+  margin-top: 5rem;
+}
 
-#input-nome:focus {
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.voce-menu {
+    cursor: pointer;
+}
+.voce-menu:hover {
+    color: #5AEFFD;
+    text-shadow: 
+      0 0 5px #5AEFFD,
+      0 0 15px #5AEFFD,
+      0 0 25px #5AEFFD;
+}
+
+#input-nome.p-inputtext {
+  width: 17rem;
+  font-size: 0.75rem;
+}
+
+#input-nome.p-inputtext:focus {
   border-color: #5AEFFD !important;
   box-shadow: 0 0 0 2px rgba(90, 239, 253, 0.4) !important;
+}
+
+//apparizione form animata
+.animazione-form {
+  animation: popIn 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+//effetto carino sul titolo
+
+.voce-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }

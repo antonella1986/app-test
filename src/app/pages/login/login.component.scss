@@ -58,15 +58,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* forza il wrapper del p-password */
-::ng-deep .p-password {
-  width: 100%;
-}
-
-::ng-deep .p-password input {
-  width: 100%;
-}
-
 .logo-container {
   text-align: center;
   margin-bottom: 2rem;
@@ -167,7 +158,21 @@ p-card {
   color: white;
 }
 
+#username {
+  font-size: 0.75rem;
+}
+
 #username:focus {
   border-color: #5AEFFD !important;
   box-shadow: 0 0 0 2px rgba(90, 239, 253, 0.4) !important;
+}
+
+/* forza il wrapper del p-password */
+::ng-deep .p-password {
+  width: 100%;
+}
+
+::ng-deep .p-password input {
+  width: 100%;
+  font-size: 0.75rem;
 }
